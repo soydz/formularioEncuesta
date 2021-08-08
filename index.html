@@ -4,9 +4,71 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Formulario</title>
+	<link rel="stylesheet" type="text/css" href="./main.css">
 </head>
 <body>
-	<h1>Formulario</h1>
-	<p>hello world</p>
+	<div class="main">
+		<div class="container">
+
+			<div class="title">
+				<h1 id="title" class="title__h1">Formulario</h1>
+				<p id="description" class="title__p">Gracias por tu aporte, nos ayudas a conocer a nuestros usuarios</p>
+			</div>
+			
+
+			<form action="" id="survey-form" class="form">
+				<div class="col">
+					<div class="form__name card">
+						<label for="name" id="name-label" class="form__label--title block">Nombre</label>
+						<input type="text" id="name" class="form__name--input caja" placeholder="Ingresa tu nombre" required>
+					</div> 
+					<div class="form__email card">
+						<label for="email" id="email-label" class="form__label--email block">Correo</label>
+						<input type="email" id="email" class="form__email--input caja" placeholder="Ingresa tu email" required>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card">					
+						<label for="number" id="number-label" class="block">Años de experiencia</label>
+						<input type="number" id="number" class="number caja" min="0" max="50" placeholder="Tiempo de experiencia">
+					</div>
+
+					<div class="card">
+						<label for="" class="dropdown__label block">Que sistema operativo prefieres</label>
+						<select type="dropdown" id="dropdown" class="caja" required>
+							<option disabled selected>Selecciona una opcion</option>
+							<option>Mac OS</option>
+							<option>GNU/Linux</option>
+							<option>Chrome OS</option>
+							<option>Solaris</option>
+							<option>Windows</option>
+						</select> 
+					</div>
+				</div>
+
+				<div class="card rol">
+					<h3 class="block rol__title">Cual es tu rol</h3>
+					<label class="nradio"><input type="radio" name="nradio" value="Diseñador UI/UX"> Diseñador UI/UX</label>
+					<label class="nradio"><input type="radio" name="nradio" value="Front-end"> Frontend</label>
+					<label class="nradio"><input type="radio" name="nradio" value="Back-end"> Backend</label>
+					<label class="nradio"><input type="radio" name="nradio" value="DBA"> DBA</label>
+					<label class="nradio"><input type="radio" name="nradio" value="Arquitecto Cloud"> Arquitecto Cloud</label>
+				</div> 
+
+				<textarea class="form__textarea" placeholder="Ingresa tu comentario aqui..."></textarea>
+
+				<div class="form__checkbox">
+					<label class="block"><input type="checkbox" value="terminosYCondiciones" required> He leido y acepto los terminos y condiciones</label>
+					<label><input type="checkbox" value="incribirEmail"> Deseo recibir imformacion en mi email</label>
+				</div>
+				<button id="submit" class="form__btn block">Enviar</button>
+			</form>
+
+		</div>
+	</div>
+
+	<script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
+
